@@ -7,7 +7,7 @@ body {
   font-style: normal;
 }
 #header .carousel-item img {
-  max-height: 700px;
+  max-height: 680px;
   object-fit: cover;
 }
 .top-header {
