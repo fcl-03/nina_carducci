@@ -112,6 +112,10 @@ body {
 }
 .nav-pills .nav-link {
   color: #000;
+  cursor: pointer;
+}
+.nav-pills .nav-link {
+  color: #000;
 }
 .item-column {
   position: relative;
@@ -140,7 +144,41 @@ body {
   display: flex;
   font-size: 24px;
 }
+.mg-prev::after {
+  content: "Précédent";
+  font-size: 0;
+}
+.mg-next::after {
+  content: "Suivant";
+  font-size: 0;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 36px !important;
+  height: 36px !important;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.9));
+}
 
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: #000000 !important; /* Contraste WAVE : noir sur fond blanc calculé = 21:1. N'affecte pas les icônes SVG background-image. */
+}
+
+/* Indicateurs */
+.carousel-indicators [data-bs-target] {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  border: none !important;
+  height: 3px !important;
+  opacity: 1 !important;
+}
+
+/* L'indicateur de la photo active */
+.carousel-indicators .active {
+  background-color: #e0de4a !important;
+  opacity: 1 !important;
+}
 .quote {
   font-family: "Spectral";
   font-style: italic;
